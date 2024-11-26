@@ -5,6 +5,7 @@ import Header from "../components/Header";
 import { RxHome } from "react-icons/rx";
 import Carousel from "react-grid-carousel";
 import img1 from "../images/category_icon_2.png"
+import Footer from "../components/Footer";
 
 const Home = () => {
 
@@ -70,7 +71,7 @@ const Home = () => {
 
 
 
-
+<Footer/>
     </div>
   );
 };

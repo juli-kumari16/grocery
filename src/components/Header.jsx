@@ -21,6 +21,7 @@ import list8 from "../images/category_list_icon_2.png";
 import list9 from "../images/category_list_icon_7.png";
 import { VscArchive } from "react-icons/vsc";
 import menu from "../images/menu_img.jpg";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -424,10 +425,9 @@ const Header = () => {
               <div className="flex items-center space-x-8">
                 <ul className="flex space-x-5 text-gray-600 font-medium text-base">
                   <li className="relative cursor-pointer items-center space-x-1 hover:text-green-500 flex group">
-                    <span className="flex items-center">
-                      Home
-                      <RiArrowDropDownLine className="text-4xl pt-2" />
-                    </span>
+                  <Link to="/Home">
+                    <span className="flex items-center">Home <RiArrowDropDownLine className="text-4xl pt-2" /></span>
+                    </Link> 
                     <ul className="absolute top-full left-0 hidden group-hover:block bg-white border mt-3 border-gray-300 shadow-md w-40 z-10">
                       {homeItems.map((home, index) => (
                         <li
@@ -440,9 +440,12 @@ const Header = () => {
                     </ul>
                   </li>
 
-                  <li className="cursor-pointer items-center space-x-1 hover:text-green-500 flex group">
-                    <span>Shop</span>
-                    <RiArrowDropDownLine className="text-4xl pt-2" />
+                  <li  className="cursor-pointer items-center space-x-1 hover:text-green-500 flex group">
+                    <Link to="/shop">
+
+                    <span className="flex items-center">Shop <RiArrowDropDownLine className="text-4xl pt-2" /></span>
+                    
+                    </Link> 
 
                     {/* Dropdown menu */}
                     <div className="absolute top-16 group-hover:flex hidden space-x-4 bg-white shadow-md z-10 ">
@@ -480,11 +483,14 @@ const Header = () => {
                   </li>
 
                   <li className="cursor-pointer items-center space-x-1 hover:text-green-500 flex">
-                    <span>Blog</span>
+                  <Link to="/Blog">
+                    <span className="flex items-center">Blog </span>
+                    </Link> 
                   </li>
                   <li className="cursor-pointer items-center space-x-1 text-green-500 flex group relative z-10">
-                    <span>Pages</span>
-                    <RiArrowDropDownLine className="text-4xl pt-2" />
+                  <Link to="/Page">
+                    <span className="flex items-center">Page <RiArrowDropDownLine className="text-4xl pt-2" /></span>
+                    </Link> 
 
                     {/* Dropdown menu */}
                     <ul className="absolute left-0 top-full hidden bg-white border shadow-md group-hover:block w-56">
@@ -500,7 +506,9 @@ const Header = () => {
                   </li>
 
                   <li className="cursor-pointer items-center space-x-1 hover:text-green-500 flex">
-                    <span>Contact</span>
+                  <Link to="/Contact">
+                    <span className="flex items-center">Contact </span>
+                    </Link> 
                   </li>
                 </ul>
               </div>
